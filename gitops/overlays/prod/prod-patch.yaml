@@ -3,4 +3,5 @@ kind: Deployment
 metadata:
   name: myapp
 spec:
+  namespace: prod
   replicas: 4
