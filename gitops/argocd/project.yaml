@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: simple-star-battle-project
+  namespace: argocd
+spec:
+  description: 'A project for the Simple Star Battle application'
+  sourceRepos:
+    - '*'  # Allows all repositories, adjust this to specify particular repositories
+  destinations:
+    - namespace: '*'
+      server: 'https://kubernetes.default.svc'  # Adjust this to your cluster's server address
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  # Uncomment and adjust the following to define namespace-scoped permissions
+  # namespaceResourceBlacklist:
+  #   - group: ''
+  #     kind: ''
+  syncPolicy:
+    automated:  # Uncomment this section if you want automated sync
+      prune: true  # Adjust this to 'true' if you want to automatically delete resources that are not in Git
+      selfHeal: true  # Adjust this to 'true' if you want automatic self-healing
+  # Add additional project settings here as needed
+
