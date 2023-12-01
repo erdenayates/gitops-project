@@ -4,4 +4,4 @@ metadata:
   name: my-app
   namespace: dev
 spec:
-  replicas: 3
+  replicas: 2
