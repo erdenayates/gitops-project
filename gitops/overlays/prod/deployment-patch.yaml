@@ -1,0 +1,6 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-star-battle
+spec:
+  replicas: 5  # Example: Using 5 replicas in prod for higher availability

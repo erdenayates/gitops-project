@@ -1,5 +1,8 @@
+namespace: dev
+namePrefix: dev-
+
 resources:
   - ../../base
+
 patchesStrategicMerge:
-  - dev-patch.yaml  # For dev overlay
-  # - prod-patch.yaml  # For prod overlay
+  - deployment-patch.yaml
