@@ -1,5 +1,5 @@
 resources:
   - ../../base
-patches:
-  - prod-patch.yaml
-namespace: prod
+patchesStrategicMerge:
+  # - dev-patch.yaml  # For dev overlay
+  - prod-patch.yaml  # For prod overlay
